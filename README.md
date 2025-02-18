@@ -1,50 +1,84 @@
-# React + TypeScript + Vite
+# Menu Product App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação web moderna desenvolvida com React, TypeScript e Vite para gerenciar pedidos de produtos em um menu digital. O projeto utiliza Tailwind CSS para estilização e oferece uma experiência de usuário intuitiva para adicionar itens ao carrinho e finalizar compras.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router DOM
+- ESLint
+- Prettier
 
-## Expanding the ESLint configuration
+## Pré-requisitos
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Antes de começar, certifique-se de ter instalado:
 
-- Configure the top-level `parserOptions` property like this:
+- Node.js (versão 18 ou superior)
+- npm (geralmente vem com Node.js)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Instalação
+
+1. Clone o repositório:
+```bash
+git clone [URL_DO_REPOSITÓRIO]
+cd menu-product
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2. Instale as dependências:
+```bash
+npm install
 ```
+
+## Executando o Projeto
+
+1. Para iniciar o servidor de desenvolvimento:
+```bash
+npm run dev
+```
+
+2. Acesse a aplicação em seu navegador:
+```
+http://localhost:3000
+```
+
+## Scripts Disponíveis
+
+- `npm run dev` - Inicia o servidor de desenvolvimento
+- `npm run build` - Cria a versão de produção
+- `npm run lint` - Executa a verificação de linting
+- `npm run preview` - Visualiza a versão de produção localmente
+
+## Estrutura do Projeto
+
+```
+src/
+  ├── assets/        # Imagens e recursos estáticos
+  ├── components/    # Componentes React reutilizáveis
+  ├── layouts/       # Layouts da aplicação
+  ├── libs/          # Tipos e utilidades
+  ├── services/      # Serviços e integrações
+  └── App.tsx        # Componente principal
+```
+
+## Funcionalidades
+
+- Listagem de produtos
+- Carrinho de compras
+- Gerenciamento de quantidade de itens
+- Checkout de pedidos
+- Interface responsiva
+
+## Personalização
+
+O projeto utiliza Tailwind CSS para estilização. As configurações de tema podem ser encontradas em `tailwind.config.js`, onde você pode personalizar:
+
+- Cores
+- Fontes
+- Breakpoints
+- Espaçamentos
+
+
+#
