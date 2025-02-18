@@ -1,11 +1,13 @@
-
+import { Outlet } from "react-router-dom";
+import Home from "../Home";
 
 const RootLayout = () => {
   return (
-    <div>
-      RootLayout
-    </div>
+    <>
+      <Home />
+      <Outlet />
+    </>
   );
-}
+};
 
 export default RootLayout;
